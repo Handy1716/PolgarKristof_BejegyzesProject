@@ -51,7 +51,10 @@ public class Main {
             System.out.println(bejegyzesek.get(i).getLikeok());
         }
         //masodik elem szovege megvaltoztatasa a listaban
-
+        System.out.println("adj meg egy új tartalmat a második bejegyzéshez");
+        String userTartalom = sc.next();
+        bejegyzesek.get(1).setTartalom(userTartalom);
+        System.out.println(bejegyzesek);
     }
 
 
