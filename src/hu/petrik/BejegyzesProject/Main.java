@@ -55,7 +55,33 @@ public class Main {
         String userTartalom = sc.next();
         bejegyzesek.get(1).setTartalom(userTartalom);
         System.out.println(bejegyzesek);
+        // 3.Feladat
+        //a
+        int nepszerusegInt= 0;
+
+        for (int i = 0; i < bejegyzesek.size(); i++) {
+            if (nepszerusegInt<bejegyzesek.get(i).getLikeok()) {
+                nepszerusegInt= bejegyzesek.get(i).getLikeok();
+            }
+        }
+        System.out.println(nepszerusegInt);
+        //b
+        boolean tf = false;
+        for (int i = 0; i < bejegyzesek.size(); i++) {
+            if (bejegyzesek.get(i).getLikeok()>=35) {
+                tf = true;
+            }
+        }
+        if (tf) {
+            System.out.println("Van olyan bejegyzés ami több mint 35 likeot kapott");
+        } else {
+            System.out.println("Nincs olyan bejegyzés ami több mint 35 likeot kapott");
+        }
+
+
+
     }
+
 
 
 
