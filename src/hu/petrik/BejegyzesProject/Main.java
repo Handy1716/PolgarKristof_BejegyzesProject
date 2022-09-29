@@ -15,7 +15,6 @@ public class Main {
         bejegyzesek.add(bejegyzes1);
         bejegyzesek.add(bejegyzes2);
         bejegyzes1.setTartalom("dadsadsadad");
-        Bejegyzesek bejegyzesLista = new Bejegyzesek("bejegyzesek.csv");
         System.out.println(bejegyzesek);
         System.out.println("Kérlek add meg mennyi bejegyzést szeretnél felvenni:");
         int felhasznaloBejegyzesSzam = sc.nextInt();
@@ -26,7 +25,7 @@ public class Main {
             String bejegyzesFelhasznalotol = sc.toString();
             Bejegyzes ujBejegyzes = new Bejegyzes(bejegyzesEmber, bejegyzesFelhasznalotol);
         }
-
-
+        Bejegyzesek bejegyzesLista = new Bejegyzesek("bejegyzesek.csv");
+        System.out.println(bejegyzesLista.ListaReturn().size()); //ellenorzes
     }
 }
