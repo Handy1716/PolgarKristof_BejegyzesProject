@@ -4,28 +4,56 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.Random;
 
 public class Main {
     public static void main(String[] args) throws IOException {
         List<Bejegyzes> bejegyzesek = new ArrayList<>();
+
 
         Scanner sc = new Scanner(System.in);
         Bejegyzes bejegyzes1 = new Bejegyzes("Jancsi", "fát vágni jó");
         Bejegyzes bejegyzes2 = new Bejegyzes("Peti", "könnyű az iskola táska, ha vannak lányok is a suliban");
         bejegyzesek.add(bejegyzes1);
         bejegyzesek.add(bejegyzes2);
-        bejegyzes1.setTartalom("dadsadsadad");
         System.out.println(bejegyzesek);
-        System.out.println("Kérlek add meg mennyi bejegyzést szeretnél felvenni:");
-        int felhasznaloBejegyzesSzam = sc.nextInt();
+
+        double n1 = 0.5;
+        while(n1 != (int)n1)
+        {
+            System.out.println("Kérlek add meg hány bejegyzést akarsz készíteni!");
+            n1 = sc.nextDouble();
+            if (n1 != (int)n1){
+                System.out.println("Rossz bemeneti paraméter: Egész számmal add meg!");
+            }
+        }
+        int felhasznaloBejegyzesSzam = (int)n1;
+        System.out.println(felhasznaloBejegyzesSzam);
+
         for (int i = 0; i < felhasznaloBejegyzesSzam; i++) {
             System.out.println("Kérlek add meg kihez köthető a bejegyzés:");
-            String bejegyzesEmber = sc.toString();
+            String bejegyzesEmber = sc.next();
             System.out.println("Kérlek add meg a bejegyzést:");
-            String bejegyzesFelhasznalotol = sc.toString();
+            String bejegyzesFelhasznalotol = sc.next();
             Bejegyzes ujBejegyzes = new Bejegyzes(bejegyzesEmber, bejegyzesFelhasznalotol);
         }
+
         Bejegyzesek bejegyzesLista = new Bejegyzesek("bejegyzesek.csv");
-        System.out.println(bejegyzesLista.ListaReturn().size()); //ellenorzes
+        for (int i = 0; i < bejegyzesLista.ListaReturn().size(); i++) {
+            bejegyzesek.add(bejegyzesLista.ListaReturn().get(i));
+        }
+        for (int i = 0; i < 20; i++) {
+            System.out.println(getRandomNumberInRange(0,20));
+        }
+
+    }
+    private static int getRandomNumberInRange(int min, int max) {
+
+        if (min >= max) {
+            throw new IllegalArgumentException("max must be greater than min");
+        }
+
+        Random r = new Random();
+        return r.nextInt((max - min) + 1) + min;
     }
 }
