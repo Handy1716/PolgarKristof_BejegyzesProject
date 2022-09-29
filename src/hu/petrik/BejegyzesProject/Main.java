@@ -42,11 +42,16 @@ public class Main {
         for (int i = 0; i < bejegyzesLista.ListaReturn().size(); i++) {
             bejegyzesek.add(bejegyzesLista.ListaReturn().get(i));
         }
-        for (int i = 0; i < 20; i++) {
-            System.out.println(getRandomNumberInRange(0,20));
+        for (int i = 0; i < (bejegyzesLista.ListaReturn().size()*20); i++) {
+            bejegyzesLista.ListaReturn().get(getRandomNumberInRange(0,bejegyzesLista.ListaReturn().size()-1)).Like();
+        }
+        for (int i = 0; i < bejegyzesLista.ListaReturn().size(); i++) {
+            System.out.println(bejegyzesLista.ListaReturn().get(i).getLikeok());
+
         }
 
     }
+
     private static int getRandomNumberInRange(int min, int max) {
 
         if (min >= max) {
