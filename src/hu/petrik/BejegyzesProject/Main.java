@@ -1,10 +1,7 @@
 package hu.petrik.BejegyzesProject;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-import java.util.Random;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -77,7 +74,16 @@ public class Main {
         } else {
             System.out.println("Nincs olyan bejegyzés ami több mint 35 likeot kapott");
         }
-
+        //c
+        int szamolo = 0;
+        for (int i = 0; i < bejegyzesek.size(); i++) {
+            if (bejegyzesek.get(i).getLikeok() <15) {
+                szamolo++;
+            }
+        }
+        System.out.printf("Összesen %d olyan bejegyzés van ami kevesebb mint 15 likeot kapott", szamolo);
+        //d
+        Collections.short()
 
 
     }
