@@ -37,20 +37,25 @@ public class Main {
             String bejegyzesFelhasznalotol = sc.next();
             Bejegyzes ujBejegyzes = new Bejegyzes(bejegyzesEmber, bejegyzesFelhasznalotol);
         }
-
+        //hozzaadas a masik listahoz
         Bejegyzesek bejegyzesLista = new Bejegyzesek("bejegyzesek.csv");
         for (int i = 0; i < bejegyzesLista.ListaReturn().size(); i++) {
             bejegyzesek.add(bejegyzesLista.ListaReturn().get(i));
         }
-        for (int i = 0; i < (bejegyzesLista.ListaReturn().size()*20); i++) {
-            bejegyzesLista.ListaReturn().get(getRandomNumberInRange(0,bejegyzesLista.ListaReturn().size()-1)).Like();
+        //like kiosztos feladat
+        for (int i = 0; i < (bejegyzesek.size()*20); i++) {
+            bejegyzesek.get(getRandomNumberInRange(0,bejegyzesek.size()-1)).Like();
         }
-        for (int i = 0; i < bejegyzesLista.ListaReturn().size(); i++) {
-            System.out.println(bejegyzesLista.ListaReturn().get(i).getLikeok());
-
+        //ellenorzes
+        for (int i = 0; i < bejegyzesek.size(); i++) {
+            System.out.println(bejegyzesek.get(i).getLikeok());
         }
+        //masodik elem szovege megvaltoztatasa a listaban
 
     }
+
+
+
 
     private static int getRandomNumberInRange(int min, int max) {
 
