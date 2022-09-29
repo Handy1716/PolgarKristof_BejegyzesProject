@@ -83,7 +83,12 @@ public class Main {
         }
         System.out.printf("Összesen %d olyan bejegyzés van ami kevesebb mint 15 likeot kapott", szamolo);
         //d
-        Collections.short()
+        Collections.sort(bejegyzesek, new Comparator<Bejegyzes>() {
+
+            public int compare(Bejegyzes o1, Bejegyzes o2) {
+                // compare two instance of `Score` and return `int` as result.
+                return o2.getLikeok().get(0).compareTo(o1.getLikeok().get(0));
+            }
 
 
     }

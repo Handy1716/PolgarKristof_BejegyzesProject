@@ -1,6 +1,8 @@
 package hu.petrik.BejegyzesProject;
 
 import java.time.LocalDateTime;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class Bejegyzes {
     public Bejegyzes(String szerzo, String tartalom) {
@@ -65,7 +67,5 @@ public class Bejegyzes {
                     tartalom + "\n";
 
         }
-
-
     }
 }
