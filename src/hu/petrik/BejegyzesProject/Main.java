@@ -11,9 +11,11 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
         Bejegyzes bejegyzes1 = new Bejegyzes("Jancsi", "fát vágni jó");
+        Bejegyzes bejegyzes2 = new Bejegyzes("Peti", "könnyű az iskola táska, ha vannak lányok is a suliban");
         bejegyzesek.add(bejegyzes1);
+        bejegyzesek.add(bejegyzes2);
         bejegyzes1.setTartalom("dadsadsadad");
         Bejegyzesek bejegyzesLista = new Bejegyzesek("bejegyzesek.csv");
-        System.out.println(bejegyzesLista);
+        System.out.println(bejegyzesek);
     }
 }

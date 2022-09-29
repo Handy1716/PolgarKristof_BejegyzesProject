@@ -14,12 +14,13 @@ public class Bejegyzesek {
         bejegyzesek = new ArrayList<>();
         this.bejegyzesek.addAll(Arrays.asList(bejegyzesTomb));
     }
+
     public Bejegyzesek(String fajlNev) throws IOException {
         this.bejegyzesek = new ArrayList<>();
         FileReader fr = new FileReader(fajlNev);
         BufferedReader br = new BufferedReader(fr);
         String sor = br.readLine();
-        while (sor!=null && !sor.equals("")) {
+        while (sor != null && !sor.equals("")) {
             String[] adatok = sor.split(";");
             Bejegyzes bejegyzes = new Bejegyzes(adatok[0], adatok[1]);
             this.bejegyzesek.add(bejegyzes);

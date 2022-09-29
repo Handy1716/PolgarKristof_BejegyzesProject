@@ -36,14 +36,15 @@ public class Bejegyzes {
 
     public void setTartalom(String tartalom) {
         this.szerkesztve = LocalDateTime.now();
-        this.modositva =true;
+        this.modositva = true;
         this.tartalom = tartalom;
     }
+
     public boolean isModositva() {
         return modositva;
     }
 
-    public void Like(){
+    public void Like() {
         this.likeok++;
     }
 
@@ -55,13 +56,14 @@ public class Bejegyzes {
 
     @Override
     public String toString() {
-        if (modositva==true) {
-            return  szerzo + " - " + likeok + " - " +letrejott + '\n' +
-                    "Szerkeszve:" +szerkesztve + '\n' +
-                    tartalom;
+        if (modositva == true) {
+            return szerzo + " - " + likeok + " - " + letrejott + '\n' +
+                    "Szerkeszve:" + szerkesztve + '\n' +
+                    tartalom + "\n";
         } else {
-            return  szerzo + " - " + likeok + " - " +letrejott + '\n' +
-                    tartalom;
+            return szerzo + " - " + likeok + " - " + letrejott + '\n' +
+                    tartalom + "\n";
+
         }
 
 
