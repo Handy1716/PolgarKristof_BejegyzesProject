@@ -49,12 +49,8 @@ public class Bejegyzes {
 
     @Override
     public String toString() {
-        return "Bejegyzes{" +
-                "szerzo='" + szerzo + '\'' +
-                ", tartalom='" + tartalom + '\'' +
-                ", likeok=" + likeok +
-                ", letrejott=" + letrejott +
-                ", szerkesztve=" + szerkesztve +
-                '}';
+        return  szerzo + " - " + likeok + " - " +letrejott + '\n' +
+                "Szerkeszve:" +szerkesztve + '\n' +
+                tartalom;
     }
 }
