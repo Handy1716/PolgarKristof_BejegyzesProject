@@ -17,5 +17,16 @@ public class Main {
         bejegyzes1.setTartalom("dadsadsadad");
         Bejegyzesek bejegyzesLista = new Bejegyzesek("bejegyzesek.csv");
         System.out.println(bejegyzesek);
+        System.out.println("Kérlek add meg mennyi bejegyzést szeretnél felvenni:");
+        int felhasznaloBejegyzesSzam = sc.nextInt();
+        for (int i = 0; i < felhasznaloBejegyzesSzam; i++) {
+            System.out.println("Kérlek add meg kihez köthető a bejegyzés:");
+            String bejegyzesEmber = sc.toString();
+            System.out.println("Kérlek add meg a bejegyzést:");
+            String bejegyzesFelhasznalotol = sc.toString();
+            Bejegyzes ujBejegyzes = new Bejegyzes(bejegyzesEmber, bejegyzesFelhasznalotol);
+        }
+
+
     }
 }
